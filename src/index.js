@@ -32,7 +32,7 @@ function adminOnly(req, res, next) {
   next();
 }
 
-app.get('/health', (req, res) => res.json({ ok: true, app: 'stormfund', ts: Date.now(), tz: TZ }));
+app.get('/health', (req, res) => res.json({ ok: true, app: 'stormfund', v: '1.1', ts: Date.now(), tz: TZ }));
 
 app.post('/login', async (req, res) => {
   try {
